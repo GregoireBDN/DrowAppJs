@@ -41,7 +41,7 @@ function Pencil(ctx, drawing, canvas) {
       );
     } else {
       this.currentShape = new Line(
-        this.color,
+        this.currColour,
         this.currLineWidth,
         dnd.startPoint,
         dnd.endPoint
