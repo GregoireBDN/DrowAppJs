@@ -5,19 +5,19 @@ Cette application permet aux utilisateurs de dessiner des formes sur un canvas H
 
 Fonctionnalités
 
-    Dessin de différentes formes (ligne,rectangle)
-    Choix de couleurs et de la taille de la ligne
-    Effacement du dessin
+Dessin de différentes formes (ligne,rectangle)
+Choix de couleurs et de la taille de la ligne
+Effacement du dessin
     
 Utilisation
 
-    Choisissez une forme à dessiner.
-    Sélectionnez une couleur.
-    Cliquez et faites glisser sur le canvas pour dessiner.
-    Utilisez le bouton d'effacement pour nettoyer le canvas si nécessaire.
+Choisissez une forme à dessiner.
+Sélectionnez une couleur.
+Cliquez et faites glisser sur le canvas pour dessiner.
+Utilisez le bouton d'effacement pour nettoyer le canvas si nécessaire.
 
 Technologies utilisées
 
-    HTML5
-    CSS3
-    JavaScript (vanilla)
+HTML5
+CSS3
+JavaScript (vanilla)
