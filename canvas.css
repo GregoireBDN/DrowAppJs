@@ -1,109 +1,121 @@
 
-.myCanvas {
-
+body {
+    background-color: #dfdad2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.cf:before,.cf:after{content:"";display:table}.cf:after{clear:both}.cf{zoom:1}
-
-.mx-button {
-    float: left;
+.reglage {
+    display: flex;
 }
-.mx-button input {
-    display: none;
-}
-.mx-button label {
-    background: #ccc;
-    border: 1px solid #888;
-    color: #666;
-    padding: 5px 10px;
-}
-.mx-button label:hover {
-    background-color: #ddd;
-}
-.mx-button label:active,
-.mx-button input:focus + label {
-    background-color: #aaa;
-}
-.mx-button input:checked + label {
-    background-color: #b4b4b4;
-}
-
 
 form {
+    display: flex;
+    height: 200px;
+    align-items: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 80px;
 }
 
-.mx-button label {
-    background-color: #f5f5f5;
-    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: linear-gradient(top, #ffffff, #e6e6e6);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    border: 1px solid #cccccc;
-    border-bottom-color: #b3b3b3;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 0;
-    margin-left: -1px;
-    padding: 4px 10px;
-    font-size: 13px;
-    line-height: 18px;
+.btn-shape-choicer {
+    display: flex;
+}
+.btn-shape-choicer input {
+    display: none;
+}
+
+#clear {
+ border: none;
+ font-size: medium;
+}
+
+.btn-shape-choicer label,
+#clear {
+    width: 100px;
     text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    vertical-align: middle;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #ccc;
+    border-radius: 5px;
+    color: #666;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-.mx-button label:hover {
-    background-color: #e6e6e6;
-    background-position: 0 -15px;
-    color: #333333;
-    text-decoration: none;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -ms-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-}
-.mx-button label:active,
-.mx-button input:focus + label {
-    background-color: #d9d9d9;
-    background-image: none;
-    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-    outline: 0;
+.btn-shape-choicer label:hover{
+    background-color: #9e9d9d;
 }
 
-.mx-button input:checked + label {
-    background: #f5f5f5;
-    -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px  rgba(0, 0, 0, 0.05);
+#clear:hover{
+    background-color: #7b7b7b;
+    color:white;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
 }
-.mx-button:first-child label {
-  -webkit-border-top-left-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-  border-top-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  border-bottom-left-radius: 4px;
-  margin-left: 0;
+#clear:active {
+    translate: 0 3px;
 }
-.mx-button:last-child label {
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  border-bottom-right-radius: 4px;
+.btn-shape-choicer input:checked + label {
+    transform: scale(1.05);
+    background-color: #7b7b7b;
+    color: white;
+    box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
 }
 
+.range-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+.range-value {
+    display: inline-block;
+    width: 50px;
+    padding: 5px;
+    margin: 10px 0;
+    background: #7b7b7b;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 10px;
+    border-radius: 5px;
+    background: #4d4d4d;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+input[type="range"]:hover {
+    opacity: 1;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7b7b7b;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7b7b7b;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"]::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+#spinnerWidth,
+#color {
+    margin: 5px;
+}
