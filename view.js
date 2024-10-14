@@ -23,7 +23,7 @@ Drawing.prototype.paint = function (ctx) {
          arrayElement.paint(ctx);
      });
     clear.addEventListener("click", ()=>{
-        this.arrayShape = new Map();
+        this.arrayShape = new Map() ;
         ctx.fillStyle = '#9e9d9d';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         listBtnRemoveShape.innerHTML = ""
