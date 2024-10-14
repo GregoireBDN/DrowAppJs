@@ -26,13 +26,13 @@ form {
     display: none;
 }
 
-#clear {
+#clear, .btnRemove{
  border: none;
  font-size: medium;
 }
 
 .btn-shape-choicer label,
-#clear {
+#clear, .btnRemove {
     width: 100px;
     text-align: center;
     margin: 5px;
@@ -47,13 +47,13 @@ form {
     background-color: #9e9d9d;
 }
 
-#clear:hover{
+#clear:hover, .btnRemove:hover{
     background-color: #7b7b7b;
     color:white;
     transform: scale(1.05);
     box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
 }
-#clear:active {
+#clear:active .btnRemove:active{
     translate: 0 3px;
 }
 .btn-shape-choicer input:checked + label {
@@ -118,4 +118,14 @@ input[type="range"]::-moz-range-thumb:hover {
 #spinnerWidth,
 #color {
     margin: 5px;
+}
+
+ul {
+    padding: 0;
+    margin: 2rem 10rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }

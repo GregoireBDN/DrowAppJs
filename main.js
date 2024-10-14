@@ -1,6 +1,5 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-
 const range = document.getElementById("lineWidthChoicer");
 const rangeValue = document.getElementById("rangeValue");
 function updateRangeValue() {
@@ -22,10 +21,12 @@ range.addEventListener("change", updateRangeValue);
 // tester également Dessin.
 ////
 
+
+
 // Code final à utiliser pour manipuler Pencil.
 window.addEventListener("load", () => {
     color.value = "#000000"
-  var drawing = new Drawing([]);
+  var drawing = new Drawing(new Map());
   var pencil = new Pencil(ctx, drawing, canvas);
   drawing.paint(ctx, canvas);
 });

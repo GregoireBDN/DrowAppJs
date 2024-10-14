@@ -23,8 +23,26 @@ Drawing.prototype.paint = function (ctx) {
          arrayElement.paint(ctx);
      });
     clear.addEventListener("click", ()=>{
-        this.arrayShape = [];
+        this.arrayShape = new Map();
         ctx.fillStyle = '#9e9d9d';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);  
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        listBtnRemoveShape.innerHTML = ""
     })
 };
+
+
+function addListeShape(idShape,shape){
+    const buttonsArray = document.getElementById('listBtnRemoveShape');
+    if(shape.constructor == Rectangle){
+        buttonsArray.innerHTML += `
+        <li class="btnRemove" id="removeShapeBtn${idShape}"=>
+            Suprimer <b style="color=${shape.color}">>□<</b>
+        </li>`;
+    }else{
+        buttonsArray.innerHTML += `
+        <li class="btnRemove" id="removeShapeBtn${idShape}">
+            Suprimer <b style="color=${shape.color}">>/<</b>
+        </li>`;
+    }
+    
+}

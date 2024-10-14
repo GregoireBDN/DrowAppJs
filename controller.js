@@ -1,6 +1,14 @@
 var editingMode = { rectangle: 0, line: 1 };
 
+function generateUUID() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
 function Pencil(ctx, drawing, canvas) {
+
   this.currEditingMode = editingMode.rectangle;
   this.currLineWidth = 3;
   this.currColour = "#000000";
@@ -67,7 +75,21 @@ function Pencil(ctx, drawing, canvas) {
     } else {
       this.currentShape.endPoint = dnd.endPoint;
     }
-    drawing.arrayShape.push(this.currentShape);
+    const idShape = generateUUID();
+    drawing.arrayShape.set(idShape,this.currentShape);
+    addListeShape(idShape,this.currentShape);
     drawing.paint(ctx);
+    listBtnRemoveShape.addEventListener("click",(e)=>{
+      remove(e.target.id.substring(14),drawing,ctx);
+    });
   }.bind(this);
 }
+
+function remove (idShape, drawing, ctx) {
+  drawing.arrayShape.delete(idShape)
+  document.getElementById(`removeShapeBtn${idShape}`).remove();
+  drawing.paint(ctx)
+}
+
+
+
