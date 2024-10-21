@@ -1,14 +1,14 @@
 var editingMode = { rectangle: 0, line: 1 };
 
 function generateUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
 }
 
 function Pencil(ctx, drawing, canvas) {
-
   this.currEditingMode = editingMode.rectangle;
   this.currLineWidth = 3;
   this.currColour = "#000000";
@@ -28,7 +28,7 @@ function Pencil(ctx, drawing, canvas) {
   lineWidthChoicer.addEventListener("change", () => {
     this.currLineWidth = lineWidthChoicer.value;
   });
-  
+
   color.addEventListener("change", () => {
     console.log(color.value);
 
@@ -76,20 +76,20 @@ function Pencil(ctx, drawing, canvas) {
       this.currentShape.endPoint = dnd.endPoint;
     }
     const idShape = generateUUID();
-    drawing.arrayShape.set(idShape,this.currentShape);
-    addListeShape(idShape,this.currentShape);
+    drawing.arrayShape.set(idShape, this.currentShape);
+    addListeShape(idShape, this.currentShape);
     drawing.paint(ctx);
-    listBtnRemoveShape.addEventListener("click",(e)=>{
-      remove(e.target.id.substring(14),drawing,ctx);
+    listBtnRemoveShape.addEventListener("click", (e) => {
+      remove(e.target.id.substring(14), drawing, ctx);
     });
   }.bind(this);
 }
 
-function remove (idShape, drawing, ctx) {
-  drawing.arrayShape.delete(idShape)
-  document.getElementById(`removeShapeBtn${idShape}`).remove();
-  drawing.paint(ctx)
+function remove(idShape, drawing, ctx) {
+  drawing.arrayShape.delete(idShape);
+  const btnElement = document.getElementById(`removeShapeBtn${idShape}`);
+  if (btnElement) {
+    btnElement.remove();
+  }
+  drawing.paint(ctx);
 }
-
-
-
