@@ -1,131 +1,133 @@
-
 body {
-    background-color: #dfdad2;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #dfdad2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reglage {
-    display: flex;
+  display: flex;
 }
 
 form {
-    display: flex;
-    height: 200px;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .btn-shape-choicer {
-    display: flex;
+  display: flex;
 }
 .btn-shape-choicer input {
-    display: none;
+  display: none;
 }
 
-#clear, .btnRemove{
- border: none;
- font-size: medium;
+#clear,
+.btnRemove {
+  border: none;
+  font-size: medium;
 }
 
 .btn-shape-choicer label,
-#clear, .btnRemove {
-    width: 100px;
-    text-align: center;
-    margin: 5px;
-    padding: 5px 10px;
-    background: #ccc;
-    border-radius: 5px;
-    color: #666;
-    transition: all 0.3s ease;
-    cursor: pointer;
+#clear,
+.btnRemove {
+  width: 100px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #ccc;
+  border-radius: 5px;
+  color: #666;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.btn-shape-choicer label:hover{
-    background-color: #9e9d9d;
+.btn-shape-choicer label:hover {
+  background-color: #9e9d9d;
 }
 
-#clear:hover, .btnRemove:hover{
-    background-color: #7b7b7b;
-    color:white;
-    transform: scale(1.05);
-    box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
+#clear:hover,
+.btnRemove:hover {
+  background-color: #7b7b7b;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
 }
-#clear:active .btnRemove:active{
-    translate: 0 3px;
+#clear:active .btnRemove:active {
+  translate: 0 3px;
 }
 .btn-shape-choicer input:checked + label {
-    transform: scale(1.05);
-    background-color: #7b7b7b;
-    color: white;
-    box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
+  transform: scale(1.05);
+  background-color: #7b7b7b;
+  color: white;
+  box-shadow: 0 0 5px rgba(55, 55, 55, 0.5);
 }
 
 .range-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
 }
 .range-value {
-    display: inline-block;
-    width: 50px;
-    padding: 5px;
-    margin: 10px 0;
-    background: #7b7b7b;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
+  display: inline-block;
+  width: 50px;
+  padding: 5px;
+  margin: 10px 0;
+  background: #7b7b7b;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
 }
 input[type="range"] {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 10px;
-    border-radius: 5px;
-    background: #4d4d4d;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+  -webkit-appearance: none;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background: #4d4d4d;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 input[type="range"]:hover {
-    opacity: 1;
+  opacity: 1;
 }
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7b7b7b;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #7b7b7b;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7b7b7b;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #7b7b7b;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 input[type="range"]::-webkit-slider-thumb:hover,
 input[type="range"]::-moz-range-thumb:hover {
-    box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
 #spinnerWidth,
 #color {
-    margin: 5px;
+  margin: 5px;
 }
 
 ul {
-    padding: 0;
-    margin: 2rem 10rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  padding: 0;
+  margin: 2rem 10rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
